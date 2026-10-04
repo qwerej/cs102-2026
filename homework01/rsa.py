@@ -63,6 +63,8 @@ def multiplicative_inverse(e: int, phi: int) -> int:
 
     if temp_phi == 1:
         return y2 % phi
+    else:
+        raise ValueError
     pass
 
 
