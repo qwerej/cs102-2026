@@ -27,8 +27,10 @@ def encrypt_vigenere(plaintext: str, keyword: str) -> str:
             else:
                 base = ord("a")
                 ciphertext += chr((ord(char) - base + shift) % 26 + base)
+        else:
+            ciphertext += char
 
-            key_index += 1
+        key_index += 1
 
     return ciphertext
 
@@ -62,7 +64,9 @@ def decrypt_vigenere(ciphertext: str, keyword: str) -> str:
             else:
                 base = ord("a")
                 plaintext += chr((ord(char) - base - shift) % 26 + base)
+        else:
+            plaintext +=1
 
-            key_index += 1
+        key_index += 1
 
     return plaintext
