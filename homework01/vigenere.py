@@ -65,7 +65,7 @@ def decrypt_vigenere(ciphertext: str, keyword: str) -> str:
                 base = ord("a")
                 plaintext += chr((ord(char) - base - shift) % 26 + base)
         else:
-            plaintext +=1
+            plaintext += 1
 
         key_index += 1
 
